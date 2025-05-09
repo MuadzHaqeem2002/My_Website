@@ -1,3 +1,66 @@
+/* Default styles for desktop */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+#desktop-nav .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+#desktop-nav .nav-links li {
+  margin: 0 1rem;
+}
+
+#desktop-nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles for mobile */
+#hamburger-nav {
+  display: none;
+}
+
+#hamburger-nav .menu-links {
+  display: none;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+#hamburger-nav .menu-links.open {
+  display: flex;
+}
+
+#hamburger-nav .hamburger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+}
+
+#hamburger-nav .hamburger-icon span {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+}
+
+/* Media Queries */
+
+/* For large screens */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -7,12 +70,14 @@
   #hamburger-nav {
     display: flex;
   }
+
+  .about-containers {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.about-containers {
-  flex-wrap: wrap;
-}
-
+/* For medium-sized screens (tablets, smaller laptops) */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -21,23 +86,14 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
 
-  #profile,
-  .section-container {
+  #profile, .section-container {
     display: block;
-  }
-
-  section,
-  .section-container {
-    height: fit-content;
   }
 
   section {
     margin: 0 5%;
+    height: fit-content;
   }
 
   .section__pic-container {
@@ -51,28 +107,41 @@
   }
 }
 
+/* For small screens (mobiles) */
 @media screen and (max-width: 600px) {
-    #contact {
-        height: 100vh;
-    }
-    #profile {
-        height: 83vh;
-        margin-bottom: 0;
-    }
-    article {
-        font-size: 1rem;
-    }
+  #contact {
+    height: 100vh;
+  }
 
-    .about-containers, .contact-info-upper-container,
-    .btn-container {
-        flex-wrap: wrap;
-    }
-    .contact-info-container {
-        margin: 0;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
 
-    .contact-info-container p,
-    nav-links li a{
-        font-size: 1rem;
-    }
+  article {
+    font-size: 1rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  nav-links li a {
+    font-size: 1rem;
+  }
+
+  #hamburger-nav .menu-links {
+    width: 100%;
+  }
+
+  #hamburger-nav .hamburger-menu {
+    width: 100%;
+  }
 }
