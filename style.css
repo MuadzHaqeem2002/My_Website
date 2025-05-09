@@ -1,0 +1,269 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+    
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+           
+      .logo {
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }      
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(157, 18, 18);
+}
+
+.apa:hover{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(157, 18, 18);
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*HAMBURGER MENU*/
+
+#hamburger-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between ;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(161, 19, 19);
+    transition: all 0.3 ease-in-out ;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    max-height: 0;
+    overflow:hidden;
+    transition: all 0.3 ease-in-out ;
+}
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(121, 7, 7);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out ;
+
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open{
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/*Sections*/
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+
+.section-container{
+    display:flex ;
+}
+
+/*Profile Section*/
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 55vh;
+}
+
+.section_pic_container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p{
+    font-weight: 600;
+}
+
+.section__text__p1{
+    text-align: center;
+}
+
+.section__text__p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#social-containers{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/*ICON*/
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    
+}
+
+/*Buttton*/
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+/* Styling for both buttons */
+.btn-color-1, .btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid; /* Border color */
+    background: rgb(0, 0, 0); /* Default black background */
+    color: white; /* Text color for contrast */
+    padding: 0.5rem 1rem; /* Add padding for a button-like appearance */
+    border-radius: 2rem; /* Optional: rounded corners */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Removes underline for links */
+}
+
+/* Hover effect for both buttons */
+.btn-color-1:hover, .btn-color-2:hover {
+    background: rgb(53, 53, 53); /* Slightly lighter background on hover */
+    cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+/* Container for button spacing */
+.btn-container {
+    display: flex;
+    gap: 1rem; /* Spacing between buttons */
+}

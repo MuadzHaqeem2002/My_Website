@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Link to main CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to CSS file for media queries -->
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+
+  <body>
+    <!-- Desktop navigation bar -->
+    <nav id="desktop-nav">
+      <div class="logo">Muadz Khalid</div>
+      <div>
+        <ul class="nav-links">
+          <!-- Links to different sections of the portfolio -->
+          <li><a href="about">About</a></li>
+          <li><a href="experience">Experience</a></li>
+          <li><a href="projects">Projects</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hamburger menu for mobile view -->
+    <nav id="hamburger-nav">
+      <div class="logo">Muadz Khalid</div>
+      <div class="hamburger-menu">
+        <!-- Icon for opening and closing the hamburger menu -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <!-- Links for the hamburger menu with onclick to close menu after selection -->
+          <li><a href="about" onclick="toggleMenu()">About</a></li>
+          <li><a href="experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile section -->
+    <section id="profile">
+      <div class="section_pic_container">
+        <!-- Profile picture -->
+        <img src="./assests/muadz-pic.jpg" alt="Muadz Khalid Profile Picture" />
+      </div>
+
+      <div class="section__text">
+        <!-- Introduction text -->
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Muadz Khalid</h1>
+        <p class="section__text__p2">Computer Science Student</p>
+        
+        <!-- Container for buttons -->
+        <div class="btn-container">
+          <!-- Button to download resume -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assests/Resume Internship -  Muadz Khalid.pdf')"
+          >
+            Download Resume
+          </button>
+
+          <!-- Button to navigate to the contact section -->
+          <button
+            class="btn btn-color-1"
+            onclick="location.href='./#contact'"
+          >
+            Contact Info
+          </button>
+        </div>
+        
+        <!-- Social media icons -->
+        <div id="social-containers">
+          <img src="./assests/linkedin.png" alt="My LinkedIn profile"
+          class="icon" onclick="location.href='https://www.linkedin.com/in/muadz-khalid-523a09275/'">
+
+          <img src="./assests/github.png" alt="My Github profile"
+          class="icon" onclick="location.href='https://github.com/MuadzHaqeem2002'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
